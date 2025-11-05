@@ -36,7 +36,7 @@ def nieuwe_kluis(bestand):
                 break
 
         with open(bestand, "a") as edit:
-            edit.write(f"\n{kleinste_vrije};{user_input}")
+            edit.write(f"{kleinste_vrije};{user_input} \n")
 
     return kleinste_vrije
 
@@ -61,7 +61,7 @@ def kluis_openen(data):
             return False, None
 
 def kluis_teruggeven(data):
-    resultaat, nummer, password = kluis_openen("kluizen.txt")   
+    resultaat, nummer, wachtwoord = kluis_openen("kluizen.txt")   
     if resultaat == False:
         return False
     elif resultaat == True:
@@ -78,7 +78,7 @@ def kluis_teruggeven(data):
                 for waarde in regels:
                     num = waarde[0]
                     wachtwoord = waarde[1]
-                    remove.write(f"{num};{wachtwoord} \n")
+                    remove.write(f"{num};{wachtwoord}\n")
     return True
         
 while True:
@@ -108,6 +108,8 @@ while True:
             print(kluis_teruggeven(bestand_info))
         case 5:
             break
+        
+
     
 
 
