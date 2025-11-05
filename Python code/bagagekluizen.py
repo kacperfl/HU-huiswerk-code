@@ -42,8 +42,12 @@ def nieuwe_kluis(bestand):
 
 
 def kluis_openen(data):
-    ask_kluisnr = int(input("Voer de kluis nummer in: "))
-    ask_password = input("Voer de wachtwoord in voor de kluis nummer: ").strip()
+    try:
+        ask_kluisnr = int(input("Voer de kluis nummer in: "))
+        ask_password = input("Voer de wachtwoord in voor de kluis nummer: ").strip()
+    except ValueError:
+        print("Er is een verkeerde waarden ingevoerd!")
+        
     with open(data, "r") as file:
         for regel in file:
             regel = regel.strip()
