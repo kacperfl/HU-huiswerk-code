@@ -23,4 +23,5 @@ resultaat = analyseer_weer_v2(temperaturen, regen)
 
 print(f"Gemiddelde temperatuur is:{resultaat[0]}")
 print(f"Gemiddelde neerslag is {resultaat[1]}")
-print(f"Droogste dag/en waren: {', '.join(f"Dag {dag[0]}: {dag[1]}c, {dag[2]}mm" for dag in resultaat[2])}")
+print(f"Droogste dag/en waren: {', '.join(f'Dag {dag[0]}: {dag[1]}c, {dag[2]}mm ' for dag in resultaat[2])}") 
+print(f"De natste dag/en waren: {', '.join(f'Dag: {dag[0]}: {dag[1]}c, {dag[2]}mm' for dag in resultaat[3])}")
