@@ -4,10 +4,7 @@ def analyseer_weer(data_temp, data_regen):
     gemiddelde_temp = sum(data_temp) / len(data_temp)
     gemiddelde_neerslag = sum(data_regen) / len(data_regen)
     weer = zip(data_temp, data_regen)
-    
-    #droogste_dag = min(data_regen)
-    #natste_dag = max(data_regen)
-    
+      
     for temp in data_temp:
         if temp > gemiddelde_temp:
             boven_gemiddelde_temps.append(temp)

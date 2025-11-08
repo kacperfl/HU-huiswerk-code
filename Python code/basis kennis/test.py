@@ -1,7 +1,5 @@
-names = ['John', 'Alice', 'Bob', 'Lucy']
-scores = [85, 90, 78, 92]
+temperaturen = [20, 22, 18, 21]
+regen = [0, 5, 2, 3]
 
-res = zip(names, scores)
-for value in res:
-    if value[1] > 80:
-        print(value)
+for dag, (temp, rain) in enumerate(zip(temperaturen, regen), start = 1):
+    print(f"Dag: {dag} temperatuur: {temp} regen hoeveelheid in mm: {rain}")
